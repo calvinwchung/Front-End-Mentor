@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    
+    body {
+      background: rgb(255, 255, 255);
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+     
+    }
+
+    fieldset {
+      background-color: hsl(213, 19%, 18%);
+      border: 10px solid hsl(213, 19%, 18%);
+      width: 300px;
+      margin: auto;
+      margin-top: 20%;
+      border-radius: 30px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      box-shadow: 4px 4px black;
+    }
+
+    h1 {
+      font-size: 30px;
+      color: white;
+    }
+
+    h2 {
+      font-size: 30px;
+      color: white;
+      text-align: center;
+    }
+
+    p {
+      font-size: 15px;
+      color: hsl(217, 12%, 63%);
+    }
+
+    button {
+      border-radius: 15px;
+      background-color: orange;
+      margin-top: 10px;
+      margin-left: 20px;
+      text-align: center;
+      padding: 8px 100px;
+      border: none;
+      color: white;
+      font-size: 18px;
+      box-shadow: 4px 4px darkslategray;
+      
+      
+    }
+
+    button:hover {
+      background-color: white;
+      color: orange;
+    }
+
+    button:active {
+      background-color: orange;
+      box-shadow: 4px 4px darkslategray;;
+      transform: translateY(4px)
+    }
+
+    input {
+      border-radius: 50%;
+      margin-left: 15px;
+      padding: 10px 15px;
+      border: none;
+      background-color: darkslategray;
+      color: white;
+      font-size: 18px;
+      box-shadow: 4px 4px black;
+    }
+
+    input:hover {
+      background-color: white;
+      color: darkslategray;
+    }
+    
+    input:active {
+      background-color: darkorange;
+      box-shadow: 4px 4px darkslategray;;
+      transform: translateY(4px)
+    }
+
+    svg {
+      border-radius: 50%;
+      margin-left: 1px;
+      padding: 10px 12px;
+      border: none;
+      background-color: darkslategray;
+      color: white;
+      font-size: 18px;
+      box-shadow: 4px 4px black;
+    }
+
+   #textBox {
+     color: orange;
+     text-align: center;
+     background: darkslategray;
+     border-radius: 15px;
+     width: 200px;
+     height: 20px;
+   }
+
+  </style>
+</head>
+<body>
+    
+  <!-- Rating state start -->
+  <fieldset id="body">
+    <div id="images">
+    <img src="images/illustration-thank-you.svg">
+    <img src="images/icon-star.svg">
+    </div>
+    <div id="textBox"></div>
+    <div id="header">
+    <h2>Thank You!</h2>
+    <h1>How did we do?</h1>
+    </div>
+  <div id="paragraph">
+  <p>We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!</p>
+  <p>Please let us know how we did with your support request. All feedback is appreciated 
+  to help us improve our offering!</p>
+  </div>
+  <div class="rating" id="rating">
+  <input type="button" id="one" onclick="choice(this.value)" name="numbers" value="1" / >
+  <input type="button" id="two" onclick="choice(this.value)" name="numbers" value="2" / >
+  <input type="button" id="three" onclick="choice(this.value)" name="numbers" value="3" / >
+  <input type="button" id="four" onclick="choice(this.value)" name="numbers" value="4" / >
+  <input type="button" id="five" onclick="choice(this.value)" name="numbers" value="5" / >
+  </div>
+    <br/>
+  <div id="button">
+  <button onclick="submitForm()" type="submit" name="submitBtn" value="Submit" >SUBMIT</button>
+  </div>
+  </fieldset>
+  
+  <!-- Rating state end -->
+
+  <!-- Thank you state start -->
+  <script>
+      const theBody = document.getElementById('body');
+      const theHeader = document.getElementById('header');
+      const theParagraph = document.getElementById('paragraph');
+      const theImages = document.getElementById('images')
+      const theButton = document.getElementById('button')
+      const theRating = document.getElementById('rating')
+      const theTextBox = document.getElementById('textBox')
+      let theImagesAdd = theImages.firstElementChild.cloneNode(true);
+      let theHeaderAdd = theHeader.firstElementChild.cloneNode(true);
+      let theParagraphAdd = theParagraph.firstElementChild.cloneNode(true);
+      let theTextBoxAdd = theTextBox.cloneNode(true);
+      
+
+      function removeThankYou () {
+       theImages.removeChild(theImages.firstElementChild);
+       theHeader.removeChild(theHeader.firstElementChild);
+       theParagraph.removeChild(theParagraph.firstElementChild);
+       theTextBox.remove();
+      }
+      removeThankYou()
+
+      function changeBackground(elementTag) {
+        elementTag.style.background = 'orange';
+        // elementTag.setAttribute('data-selected', '');
+      }
+
+  
+
+      function choice(myChoice) {
+        let buttonTag = document.getElementById('one')
+        if (myChoice == "1") {
+        changeBackground(buttonTag); 
+        console.log(buttonTag);  
+      
+        } else if (myChoice == "2") {
+          buttonTag = document.getElementById('two');
+          changeBackground(buttonTag);
+      
+        } else if (myChoice == "3"){
+          buttonTag = document.getElementById('three');
+          changeBackground(buttonTag);
+      
+        } else if (myChoice == "4") {
+          buttonTag = document.getElementById('four');
+          changeBackground(buttonTag);
+      
+        } else {
+          buttonTag = document.getElementById('five');
+          changeBackground(buttonTag);
+      
+        }
+      }
+
+      function removeAllChildNodes(parent) {
+        while (parent.firstChild) {
+          parent.removeChild(parent.firstChild);
+        }
+    }
+
+      function submitForm() {
+          const selectedValue = document.querySelector('[style]').getAttribute('value');
+          //const selectedValue = selectedButton.getAttribute('value');
+          //console.log(selectedButton);
+          theImages.removeChild(theImages.lastElementChild);
+          theHeader.removeChild(theHeader.lastElementChild);
+          theParagraph.removeChild(theParagraph.lastElementChild);
+          theButton.removeChild(theButton.firstElementChild);
+          
+          removeAllChildNodes(theRating);
+
+             
+        theImages.appendChild(theImagesAdd);
+        theImages.appendChild(theTextBoxAdd);
+        theHeader.appendChild(theHeaderAdd);
+        theParagraph.appendChild(theParagraphAdd);
+        
+        const textBox = document.createTextNode('You selected ' + selectedValue + ' out of 5');  
+        theTextBoxAdd.appendChild(textBox);
+       
+        theImages.style.textAlign = "center";
+        theTextBoxAdd.style.margin = "auto";
+        theTextBoxAdd.style.marginTop = "30px";
+        
+      }
+      
+
+      
+    
+
+  
+
+  </script>
+  
+</body>
+</html>
