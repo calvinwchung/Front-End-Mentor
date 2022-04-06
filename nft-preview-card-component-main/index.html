@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inspiration&family=Outfit&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inspiration&family=Outfit:wght@300&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    body {
+      background-color: hsl(217, 54%, 11%);
+    }
+
+    fieldset {
+      width: 300px;
+      background-color: hsl(216, 50%, 16%);
+      border: none;
+      border-radius: 15px;
+      margin: auto;
+      margin-top: 100px;
+    }
+
+    #image1 {
+      border-radius: 15px;
+      margin-left: 8px; 
+      margin-top: 12px;
+      display: inline-block;
+      position: relative;
+      
+    }
+
+    #image1 #img-top {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      background-position: center;
+      background-color: hsl(215, 32%, 27%);
+      padding: 115px 115px;
+      border-radius: 15px;
+      opacity: 70%;
+           
+    }
+
+    #image1:hover #img-top {
+      
+      display: inline;
+      background-position: center;
+     
+    }
+
+    h1 {
+      color: hsl(178, 100%, 50%);
+      font-family: 'Outfit', sans-serif;
+      font-size: 23px;
+      margin-left: 5px;
+    }
+
+    h1:hover {
+      color:cyan
+    }
+
+    p {
+      font-family: 'Outfit', sans-serif;
+      color: hsl(215, 51%, 70%);
+      font-size: 18px;
+      margin-left: 5px;
+      vertical-align: middle;
+    }
+
+    #ETH {
+      font-size: 14px;
+      color: hsl(178, 100%, 50%);
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    #clock {
+      font-size: 13px;
+      color: hsl(215, 51%, 70%);
+      display: inline-block;
+      margin-left: 120px;
+      vertical-align: bottom;
+    }
+
+    hr { 
+      width: 270px; 
+      height: .05px; 
+      color: hsl(215, 32%, 27%);
+      opacity: 15%;
+    }
+
+    #avatar {
+      margin-top: 5px;
+      margin-left: 5px;
+      margin-right: 5px;
+      border: solid hsl(215, 51%, 70%);
+      border-radius: 50%;
+      vertical-align: middle;
+    }
+
+    #creation {
+      display: inline-block;
+      font-size: 13px;
+      color: hsl(215, 51%, 70%);
+      vertical-align: middle;
+    }
+
+    #Jules {
+      display: inline-block;
+      font-size: 14px;
+      color: hsl(178, 100%, 50%);
+      vertical-align: middle;
+    }
+
+    #Jules:hover {
+      color:aliceblue
+    }
+
+    #mainImage {
+      border-radius: 15px;
+    }
+
+    span {
+      vertical-align: middle;
+    }
+
+  
+
+  </style>
+</head>
+<body>
+  <fieldset>
+    <div id="image1">
+    <img id="mainImage" src="images/image-equilibrium.jpg" width="280px"/>
+    <img src="images/icon-view.svg" width="50px" id="img-top"/>
+    </div>
+
+    <h1>Equilibrium #3429</h1>
+
+    <p>Our Equilibrium collection promotes balance and calm.</p>
+
+    <div><p id="ETH"> <img id="image2" src="images/icon-ethereum.svg"/> 0.041 ETH</p><p id="clock"><img src="images/icon-clock.svg"/> 3 days left</p></div>
+    <div class="block_1"></div> <hr />
+    <div id="avatarOne"><img id="avatar" src="images/image-avatar.png" width="25px"/> <p id="creation">Creation of</p> <p id="Jules">Jules Wyvern</p></div>
+  </fieldset>
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>
