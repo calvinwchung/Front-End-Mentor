@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inspiration&family=Inter:wght@700&family=Outfit:wght@300&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inspiration&family=Inter&family=Outfit:wght@300&family=Press+Start+2P&display=swap" rel="stylesheet"><!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Stats preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    @media (min-width: 375px) {
+      div {
+        flex-direction: column-reverse;
+      }
+    }
+
+    @media (min-width: 1080ppx) {
+      div {
+        flex-direction: row;
+      }
+    }
+
+    body {      
+      background-color: hsl(233, 47%, 7%);
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      justify-content: center;
+      margin-top: 150px;
+           
+    }
+    div {
+      background-color: hsl(244, 38%, 16%);
+      margin-top: 0px;
+      display: flex;
+      justify-content: center;
+      flex-flow: row wrap;
+      border-radius: 15px;
+    }
+
+    #leftSide {
+      width: 500px;
+      display: flex;
+    }
+
+    #rightSide {
+      width: 500px;
+      display: flex;
+    }
+
+    h1 {
+      color: hsl(0, 0%, 80%);
+      justify-content: left;
+      margin: 50px 50px 2px 80px;
+     
+    }
+
+    #insights {
+      color: hsl(277, 64%, 61%);
+    }
+
+    p {
+      color: hsla(0, 0%, 100%, 0.45);
+      justify-content: left;
+      margin: 1px 60px 20px 80px;
+      font-size: 15px;
+      line-height: 1.6;
+      
+
+    }
+
+    th {
+      color: hsla(0, 0%, 100%, 0.6);
+      font-size: 22px;
+      text-align: left;
+      width: 100px;
+      height: 0px;
+    
+      
+      
+      
+    }
+
+    table {
+      border-spacing: 10px;
+      border-collapse: separate;
+      line-height: 0;
+      padding: 0px;
+      border: none;
+      /* white-space: nowrap;
+      overflow: hidden; */
+    }
+
+    td {
+      color: hsla(0, 0%, 100%, 0.45);
+      justify-content: left;
+      font-size: 12px;
+     
+    }
+
+    
+
+    img {
+      z-index: 1;
+      filter:hue-rotate(purple);
+      border-radius: 15px;
+      /* opacity: 40%; */
+    }
+
+    /* @media (max-width: 800px) {
+    #leftSide, #rightSide {
+      flex: 100%;
+    }
+  } */
+
+   
+
+  
+  </style>
+</head>
+<body>
+  
+  <div id="container">
+    <div id="leftSide">
+       <h1>Get <span id="insights"> insights </span> that help your business grow.</h1>
+
+      <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer 
+      experience, and overall efficiency.</p>
+
+      <table>
+        <tr>
+          <th>10k+</th>
+          <th>314</th>
+          <th>12M+</th>
+        </tr>
+        <tr>
+          <td>COMPANIES</td>
+          <td>TEMPLATES</td>
+          <td>QUERIES</td>
+        </tr>
+      </table>
+      <!-- <h3>10k+</h3>
+      <h3>314</h3>
+      <h3>12m+</h3> 
+      <p>companies</p>
+      <p>templates</p>
+      <p>queries</p> -->
+    </div>    
+    <div id="rightSide">
+      <img src="images/image-header-desktop.jpg" width="500px"/>
+    </div>
+  </div>
+
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>
