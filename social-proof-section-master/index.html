@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan&display=swap" rel="stylesheet">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Social proof section</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+       /* mobile view */
+      @media (max-width: 800px) {
+        .social {
+        display: flex;
+        flex-direction: column;
+        margin-left: 200px;
+        margin-top: 50px;
+      }
+      .topSection {
+        display: flex;
+        flex-direction: column;
+      }
+      .header {
+        font-size: 30px;
+        display: flex;
+        width: 300px;
+        text-align: center;
+        font-family: 'League Spartan', sans-serif;
+        font-weight: 700;
+        
+      }
+      .subHeader {
+        font-size: 14px;
+        width: 300px;
+        text-align: center;
+        color: hsl(303, 10%, 53%);
+        font-family: 'League Spartan', sans-serif;
+        line-height: 120%;
+        
+      }
+      .rating1 {
+        border-radius: 5px;
+        width: 280px;
+        background-color: lightgray;
+        padding: 10px;
+        font-family: 'League Spartan', sans-serif;
+        text-align: center;
+        
+      }
+
+      .rating2 {
+        border-radius: 5px;
+        width: 280px;
+        background-color: lightgray;
+        padding: 10px;
+        font-family: 'League Spartan', sans-serif;
+        text-align: center;
+      }
+
+      .rating3 {
+        border-radius: 5px;
+        width: 280px;
+        background-color: lightgray;
+        padding: 10px;
+        font-family: 'League Spartan', sans-serif;
+        text-align: center;
+      }
+
+      .bottomSection {
+        display: flex;
+        margin-top: 5%;
+        flex-direction: column;
+        
+      }
+
+      .colton {
+        border-radius: 5px;
+        background-color: hsl(300, 43%, 22%);
+        color: white;
+        height: 200px;
+        width: 300px;
+        font-size: 12px;      
+      }
+
+      .coltonPhoto {
+        border-radius: 50%;
+        width: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+
+      .irene {
+        border-radius: 5px;
+      background-color: hsl(300, 43%, 22%);
+      color: white;
+      margin-top: 20px;
+      height: 200px;
+      width: 300px;
+      font-size: 12px;
+      }
+
+      .irenePhoto {
+        border-radius: 50%;
+        width: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+
+      .anne {
+        border-radius: 5px;
+        background-color: hsl(300, 43%, 22%);
+        color: white;
+        margin-top: 20px;
+        height: 200px;
+        width: 300px;
+        font-size: 12px; 
+        margin-right: 5%;
+        margin-bottom: 5%;
+      }
+
+      .annePhoto {
+        border-radius: 50%;
+        width: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+
+      .person {
+        display: flex;
+        margin-top: 20px;
+      }
+
+      .person2 {
+        display: flex;
+        margin-top: 20px;
+      }
+
+      .person3 {
+        display: flex;
+        margin-top: 20px;
+      }
+
+      p {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        font-family: 'League Spartan', sans-serif;
+        font-weight: 400;
+        color: lightgray;
+        line-height: 150%;
+      }
+
+      .name {
+        font-family: 'League Spartan', sans-serif;
+        width: 100px;
+        font-weight: 500;
+        line-height: 0%;
+        margin-top: 10%;
+
+        
+      }
+
+      .buyer {
+        display: flex;
+        font-family: 'League Spartan', sans-serif;
+        font-weight: 400;
+        color: hsl(333, 80%, 67%);
+        line-height: 0%;
+
+      }
+
+      .stars {
+        margin-bottom: 5px;
+      }
+    }
+
+/* pc view */
+@media (min-width: 800px){
+        .social {
+        border: solid black 1px;
+        width: 1000px;
+        margin: auto;
+        margin-top: 10%;
+        font-family: 'Courier New', Courier, monospace;
+        background: url("images/bg-pattern-bottom-desktop.svg") right bottom no-repeat, url("images/bg-pattern-top-desktop.svg") left top no-repeat;
+        /* background-image: url("images/bg-pattern-bottom-desktop.svg"); */
+        
+      }
+
+      .topSection {
+        display: flex;
+        flex-direction: column;
+        margin-top: 6%;
+      }
+
+      .header {
+        font-size: 38px;
+        display: flex;
+        width: 65%;
+        margin-left: 10%;
+        font-family: 'League Spartan', sans-serif;
+        font-weight: 700;
+        
+      }
+
+      .subHeader {
+        font-size: 14px;
+        width: 70%;
+        margin-left: 10%;
+        margin-top: -15px;
+        color: hsl(303, 10%, 53%);
+        font-family: 'League Spartan', sans-serif;
+        line-height: 120%;
+        
+      }
+
+      .calvin {
+        display: flex;
+      }
+
+      .ratings {
+        margin-top: 8%;
+        margin-right: 10%;
+        font-size: 13px;
+        font-family: 'League Spartan', sans-serif;
+        font-weight: 700;
+        
+        
+      }
+
+      .chung {
+        border-radius: 5px;
+        width: 360px;
+        background-color: hsl(300, 34%, 96%);
+        padding: 10px;
+        display: flex;
+        align-items: center;
+
+      }
+
+      .rating1 {
+      margin-left: -50px;       
+      }
+
+      .rating2 {
+        margin-left: -20px;
+      }
+
+      .rating3 {       
+        margin-left: 10px;
+      }
+
+      .stars {
+        margin-right: 10px;
+        
+        
+      }
+
+      .bottomSection {
+        display: flex;
+        margin-top: 5%;
+        
+      }
+
+      .colton {
+        border-radius: 5px;
+        background-color: hsl(300, 43%, 22%);
+        color: white;
+        margin-top: 1px;
+        height: 30%;
+        font-size: 12px;
+        margin-left: 5%;
+        
+      }
+
+      .coltonPhoto {
+        border-radius: 50%;
+        width: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+
+      .irene {
+        border-radius: 5px;
+      background-color: hsl(300, 43%, 22%);
+      color: white;
+      margin-top: 20px;
+      height: 30%;
+      font-size: 12px;
+      margin-left: 5%;
+      }
+
+      .irenePhoto {
+        border-radius: 50%;
+        width: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+
+      .anne {
+        border-radius: 5px;
+        background-color: hsl(300, 43%, 22%);
+        color: white;
+        margin-top: 40px;
+        height: 30%;
+        font-size: 12px; 
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 5%;
+      }
+
+      .annePhoto {
+        border-radius: 50%;
+        width: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+
+      .person {
+        display: flex;
+        margin-top: 20px;
+      }
+
+      .person2 {
+        display: flex;
+        margin-top: 20px;
+      }
+
+      .person3 {
+        display: flex;
+        margin-top: 20px;
+      }
+
+      p {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        font-family: 'League Spartan', sans-serif;
+        font-weight: 400;
+        color: lightgray;
+        line-height: 150%;
+      }
+
+      .name {
+        font-family: 'League Spartan', sans-serif;
+        width: 100px;
+        font-weight: 500;
+        line-height: 0%;
+        margin-top: 10%;
+
+        
+      }
+
+      .buyer {
+        display: flex;
+        font-family: 'League Spartan', sans-serif;
+        font-weight: 400;
+        color: hsl(333, 80%, 67%);
+        line-height: 0%;
+
+      }
+      }
+
+      
+    </style>
+  </head>
+  <body>
+    <div class="social"> 
+      <div class="calvin">
+      <div class="topSection">
+        <h1 class="header">
+         10,000+ of our users love our products.
+        </h1>
+
+        <div class="subHeader"> 
+          We only provide great products combined with excellent customer service.
+          See what our satisfied customers are saying about our services.
+        </div>
+      </div>
+      <div class="ratings">
+        <div class="rating1 chung"> <div class="stars"><img src="images/icon-star.svg" /> <img src="images/icon-star.svg" /> <img src="images/icon-star.svg" /> <img src="images/icon-star.svg" /> <img src="images/icon-star.svg" /></div>  Rated 5 Stars in Reviews</div><br/>
+
+        <div class="rating2 chung"><div class="stars"><img src="images/icon-star.svg" /> <img src="images/icon-star.svg" /> <img src="images/icon-star.svg" /> <img src="images/icon-star.svg" /> <img src="images/icon-star.svg" /></div> Rated 5 Stars in Report Guru</div><br/>
+
+        <div class="rating3 chung"><div class="stars"><img src="images/icon-star.svg" /> <img src="images/icon-star.svg" /> <img src="images/icon-star.svg" /> <img src="images/icon-star.svg" /> <img src="images/icon-star.svg" /></div> Rated 5 Stars in BestTech</div>
+      </div>
+    </div>
+    <div class="bottomSection"> 
+      <div class="colton">
+        <div class="person">
+        <img class="coltonPhoto" src="images/image-colton.jpg" />
+        <div>
+        <div class="name">Colton Smith</div> <br/>
+        <div class="buyer">Verified Buyer</div>
+      </div>
+        </div>
+        <p>
+        "We needed the same printed design as the one we had ordered a week prior.
+        Not only did they find the original order, but we also received it in time.
+        Excellent!"
+      </p>
+      </div>
+      <div class="irene">
+        <div class="person2">
+        <img class="irenePhoto" src="images/image-irene.jpg" />
+        <div>
+        <div class="name">Irene Roberts</div> <br/>
+        <div class="buyer">Verified Buyer</div>
+      </div>
+      </div>
+
+      <p>
+        "Customer service is always excellent and very quick turn around. Completely
+        delighted with the simplicity of the purchase and the speed of delivery."
+      </p>
+      </div>
+
+
+      <div class="anne">
+        <div class="person3">
+        <img class="annePhoto" src="images/image-anne.jpg"/>
+        <div>
+        <div class="name">Anne Wallace</div> <br/>
+        <div class="buyer">Verified Buyer</div>
+      </div>
+      </div>
+      <p>
+        "Put an order with this company and can only praise them for the very high
+        standard. Will definitely use them again and recommend them to everyone!"
+      </p>
+      </div>
+    </div>
+    </div>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>
