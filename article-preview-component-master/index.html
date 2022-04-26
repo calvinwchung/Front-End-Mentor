@@ -33,8 +33,6 @@
       width: 400px;
       height: 400px;
       border-top-left-radius: 15px;
-      border-bottom-left-radius: 15px;
-      
     }
 
     .text {
@@ -44,12 +42,13 @@
     }
 
     .header {
-      font-size: 30px;
+      font-size: 27px;
     }
 
     .paragraph {
       font-size: 18px;
       color: hsl(212, 23%, 69%);
+      line-height: 1.7;
     }
 
     .michelle {
@@ -76,12 +75,12 @@
       padding: 5px;
       font-size: 12px;
       font-family: 'Manrope', sans-serif;
+      transition: filter .5s ease-in-out;
     }
 
     .share:hover {
       cursor: pointer;
       background-color: gray;
-      
     }
 
     .hidden {
@@ -108,7 +107,6 @@
     .hover {
       position: relative;
       display: inline-block;
-      /* border-bottom: 1px dotted black; */
     }
 
     .hover .textBub {
@@ -117,10 +115,7 @@
       background-color: gray;
       color: #fff;
       text-align: center;
-      border-radius: 6px;
       padding: 5px 0;
-
-      /* Position the tooltip */
       position: absolute;
       z-index: 1;
     }
@@ -144,8 +139,7 @@
       right: -135px;
       top: -100px;
       display: flex;
-      align-items: center;
-      
+      align-items: center; 
     }
 
     .shareText {
@@ -154,6 +148,61 @@
       letter-spacing: 4px;
       font-size: 15px;
       font-family: 'Manrope', sans-serif;
+    }
+
+    @media (min-width: 800px) {
+      .drawers {
+        border-bottom-left-radius: 15px; 
+      }
+
+      .hover .textBub {
+        border-radius: 6px;
+        z-index: 1;
+      }
+    }
+    /* mobile view */
+    @media (max-width: 800px) {
+        .article {
+        border-radius: 15px;
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .drawers {
+        width: 500px;
+        height: 400px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px; 
+      }
+
+      .share {
+        margin-left: 156px;
+       
+      }
+
+      .textBub {
+        right: -50px;
+        top: -25px;
+        height: 80px; 
+      }
+
+      .hover .textBub {
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        width: 500px;
+        z-index: 1;
+      }
+
+      .hidden {
+        margin-left: 40px;
+        width: 40px;
+        height: 40px;
+      }
+
+      .hover .textBub::after {
+        top: 0%;
+      }
     }
 
   </style>

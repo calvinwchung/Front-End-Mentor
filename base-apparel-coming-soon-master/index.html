@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    body {
+      display: flex;
+      width: 1100px;
+      margin: auto;
+      margin-top: 6%;
+      font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .leftSide {
+      background-image: url("images/bg-pattern-desktop.svg");
+      padding: 70px;
+    }
+
+    .hero {
+      height: 600px;
+    }
+
+    .logo {
+      margin-top: 50px;
+      
+    }
+
+    .header1 {
+      margin-top: 100px;
+      
+      font-size: 60px;
+      font-weight: 300;
+      letter-spacing: .3ch;
+      color: hsl(0, 93%, 68%)
+    }
+
+    .header2 {
+      margin-top: -35px;
+     
+      font-size: 60px;
+      font-weight: 600;
+      letter-spacing: .3ch;
+    }
+
+    .paragraph {
+      
+      margin-top: -20px;
+      width: 67%;
+      color: hsl(0, 36%, 70%);
+      line-height: 1.4;
+    }
+
+    #textBox {
+      margin-top: 30px;
+      
+      border-radius: 30px;
+      width: 350px;
+      height: 40px;
+      border: solid hsl(0, 36%, 70%) 1px;
+      padding-left: 30px;
+      font-size: 15px;
+    }
+
+    .button {
+      background-color: hsl(0, 36%, 70%);
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      width: 88px;
+      height: 47px;
+      border-radius: 30px;
+      border: none;
+      margin-left: -80px;
+      margin-top: 30px;
+      cursor: pointer;
+      box-shadow: 5px 5px 5px lightgray;
+    }
+
+    .button:active {
+      background-color: hsl(0, 93%, 68%);
+      box-shadow: 6px 6px lightgray;
+      transform: translateY(2px);
+    }
+
+    .formWrapper {
+      display: flex;
+      align-items: center;
+    }
+    
+    #error {
+      display: none;
+      position: relative;
+      left: -90px;
+      top: 18px;
+    }
+
+    .thankYou {
+      color: green;
+      display: none;
+    }
+
+    .invalid {
+      color: red;
+      display: none;
+    }
+
+   
+
+  </style>
+</head>
+<body onload="document.form1.textBox.focus()">
+  <div class="leftSide">
+    <img class="logo" src="images/logo.svg"/>
+    
+    <h1 class="header1">WE'RE</h1> <h1 class="header2">COMING<br/> SOON</h1>
+
+    <p class="paragraph">Hello fellow shoppers! We're currently building our new fashion store. 
+    Add your email below to stay up-to-date with announcements and our launch deals.</p>
+    <div id="buttonWrapper">
+      <div class="formWrapper">
+      <form class="form1" name="form1">
+        <input id="textBox" name="textBox" type="text" placeholder="Email Address"/>
+      </form>
+      <div id="error"><img src="images/icon-error.svg"/></div>
+      <button type="button" onclick="validateEmail(textBox)" class="button"><img class="arrow" src="images/icon-arrow.svg" /></button>
+      </div>
+      <div class="thankYou"><p>Valid email. Thank You!</p></div>
+      <div class="invalid"><p>Please provide a valid email</p></div>
+    </div>
+   
+    
+    
+  </div> 
+  <div class="rightSide">
+    <img class="hero" src="images/hero-desktop.jpg"/>
+  </div>   
+  
+  
+
+  <script>
+     const theError = document.getElementById('error');
+     const theButtonWrapper = document.getElementById('buttonWrapper');
+     const theThankYou = document.getElementsByClassName('thankYou')[0];
+     const theInvalid = document.getElementsByClassName('invalid')[0];
+    
+   
+    function validateEmail(theTextBox) {
+      var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      if(theTextBox.value.match(mailFormat)) {
+        theThankYou.style.display = "block";
+        
+        document.form1.textBox.focus();
+        return true;
+        
+      } else {
+        theInvalid.style.display= "block";
+        theError.style.display = "block";       
+
+        document.form1.textBox.focus();
+        return false;  
+       
+      }
+     
+    }
+      
+
+  </script> 
+</body>
+</html>
