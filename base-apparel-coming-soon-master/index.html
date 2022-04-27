@@ -165,18 +165,27 @@
       var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
       if(theTextBox.value.match(mailFormat)) {
         theThankYou.style.display = "block";
+        console.log(theThankYou);
         
         document.form1.textBox.focus();
+        theInvalid.style.display = "none";
+        theError.style.display = "none";
+
         return true;
         
       } else {
-        theInvalid.style.display= "block";
+        theInvalid.style.display = "block";
+        console.log(theInvalid);
         theError.style.display = "block";       
 
         document.form1.textBox.focus();
+        theThankYou.style.display = "none";
         return false;  
        
+       
+
       }
+    
      
     }
       

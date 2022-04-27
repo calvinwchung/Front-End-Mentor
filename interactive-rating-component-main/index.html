@@ -88,13 +88,13 @@
     }
 
     input:hover {
-      background-color: white;
-      color: darkslategray;
+      background-color: orange;
+      color: white;
     }
     
     input:active {
-      background-color: darkorange;
-      box-shadow: 4px 4px darkslategray;;
+      background-color: hsl(217, 12%, 63%);
+      box-shadow: 4px 4px darkslategray;
       transform: translateY(4px)
     }
 
@@ -177,8 +177,12 @@
       removeThankYou()
 
       function changeBackground(elementTag) {
-        elementTag.style.background = 'orange';
+        elementTag.style.background = 'hsl(217, 12%, 63%)';
         // elementTag.setAttribute('data-selected', '');
+      }
+
+      function revertBackground(elementTag) {
+        elementTag.style.background = 'darkslategray';
       }
 
   
@@ -187,23 +191,33 @@
         let buttonTag = document.getElementById('one')
         if (myChoice == "1") {
         changeBackground(buttonTag); 
+        revertBackground(buttonTag.nextElementSibling);
+        revertBackground(buttonTag.previousElementSibling);
         console.log(buttonTag);  
       
         } else if (myChoice == "2") {
           buttonTag = document.getElementById('two');
           changeBackground(buttonTag);
+          revertBackground(buttonTag.nextElementSibling);
+          revertBackground(buttonTag.previousElementSibling);
       
         } else if (myChoice == "3"){
           buttonTag = document.getElementById('three');
           changeBackground(buttonTag);
+          revertBackground(buttonTag.nextElementSibling);
+          revertBackground(buttonTag.previousElementSibling);
       
         } else if (myChoice == "4") {
           buttonTag = document.getElementById('four');
           changeBackground(buttonTag);
+          revertBackground(buttonTag.nextElementSibling);
+          revertBackground(buttonTag.previousElementSibling);
       
         } else {
           buttonTag = document.getElementById('five');
           changeBackground(buttonTag);
+          revertBackground(buttonTag.nextElementSibling);
+          revertBackground(buttonTag.previousElementSibling);
       
         }
       }
